@@ -1,5 +1,4 @@
 .about-container{
-    height: 110vh;
     padding-top: 2%;
     display: flex;
     justify-content: center;
@@ -25,6 +24,8 @@
     max-width: 500px;
     margin: 0 auto;
 }
+
+/*---------------------EDUCATION----------------*/
 
 .about-ed-container{
     display: flex;
@@ -79,4 +80,140 @@
 
 .about-ed-description2 .date{
     font-size: 15px;
+}
+
+/*-------------------TECHNOLOGIES-------------------*/
+
+.technologies-container{
+    padding-top: 4%;
+    
+}
+
+.technologies-container h3{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.technologies-container p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 1%;
+    padding-bottom: 4%;
+}
+
+.technologies{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(26, 26, 26);
+}
+
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    padding: 80px;
+}
+
+.technology{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 2px solid;
+    border-color: rgba(147, 112, 219, 1);
+    border-radius: 5%;
+}
+
+.technology:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+/*-----------------ICONOS-----------------*/
+
+.technology .icon-js{
+    font-size: 40px;
+    color: rgb(241, 222, 79);
+}
+
+.technology .icon-react{
+    font-size: 40px;
+    color: rgb(113, 191, 219);
+}
+
+.technology .icon-node{
+    font-size: 40px;
+    color: rgb(132, 175, 105);
+}
+
+.technology .icon-next{
+    font-size: 40px;
+    color: white;
+}
+
+.technology .icon-redux{
+    font-size: 40px;
+    color: rgb(112, 76, 182);
+}
+
+.technology .icon-express{
+    font-size: 40px;
+    color: white;
+}
+
+.technology .icon-tailw{
+    font-size: 40px;
+    color: rgb(96, 166, 177);
+}
+
+.technology .icon-git{
+    font-size: 40px;
+    color: rgb(213, 69, 87);
+}
+
+.technology .icon-vite{
+    font-size: 40px;
+    color: rgb(131, 160, 249);
+}
+
+.technology .icon-html{
+    font-size: 40px;
+    color: rgb(211, 88, 54);
+}
+
+.technology .icon-css{
+    font-size: 40px;
+    color: rgb(52, 112, 159);
+}
+
+.technology .icon-boots{
+    font-size: 40px;
+    color: rgb(110, 35, 238);
+}
+
+.technology .icon-mongo{
+    font-size: 40px;
+    color: rgb(103, 168, 79);
+}
+
+.technology .icon-postgre{
+    font-size: 40px;
+    color: rgb(67, 101, 146);
+}
+
+.technology .icon-seq{
+    font-size: 40px;
+    color: rgb(78, 172, 233);
+}
+
+.technology .icon-github{
+    font-size: 40px;
+    color: white;
 }

@@ -1,5 +1,20 @@
-
 import './about.css'
+import { IoLogoJavascript } from "react-icons/io";
+import { FaHtml5, FaNode } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa6";
+import { SiVite } from "react-icons/si";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaBootstrap } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiSequelize } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
+
 
 const About = () => {
   return (
@@ -31,10 +46,90 @@ const About = () => {
               </div>
             </div>
             
+            <div className='technologies-container' >
 
-        </div>
-        
+            <h3>Tecnologías</h3>
 
+            <p>Aquí puedes ver algunas de las tecnologías que manejo hasta el momento.</p>
+
+            <div className='technologies' >     
+
+              <div className='container-grid'>
+
+                  <div className='technology' >
+                      <IoLogoJavascript className='icon-js' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaReact className='icon-react' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaNode className='icon-node' />
+                  </div>
+
+
+                  <div className='technology' >
+                      <SiNextdotjs className='icon-next' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiRedux className='icon-redux' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiExpress className='icon-express' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiTailwindcss className='icon-tailw' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaGitAlt className='icon-git' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiVite className='icon-vite' />
+                  </div>
+
+
+                  <div className='technology' >
+                      <FaHtml5 className='icon-html' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaCss3Alt className='icon-css' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaBootstrap className='icon-boots' />
+                  </div>
+
+                  <div className='technology' >
+                      <BiLogoPostgresql className='icon-postgre' />
+                  </div>
+
+                  <div className='technology' >
+                      <DiMongodb className='icon-mongo' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiSequelize className='icon-seq' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaGithub className='icon-github' />
+                  </div>
+
+              </div>
+
+            </div>
+          </div>
+
+              
+
+        </div>      
     </div>
   )
 }

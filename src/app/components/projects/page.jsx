@@ -2,9 +2,12 @@ import './projects.css'
 
 const Projects = () => {
   return (
-    <div>
-        <h1>Proyectos</h1>
+    <div className='projects-wrapper'>
+        <div className='projects-container' >
 
+            <h2>Proyectos</h2>
+
+        </div>
         </div>
   )
 }
