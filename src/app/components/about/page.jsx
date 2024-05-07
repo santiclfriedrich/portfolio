@@ -18,7 +18,7 @@ import { FaGithub } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className='about-container' >
+    <div className='about-container' id='about-page' >
 
         <div className='about-content' >
             <h2>Sobre mí</h2>

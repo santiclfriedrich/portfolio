@@ -1,7 +1,8 @@
 import './navbar.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiagramProject, faHome, faLanguage, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faAddressCard } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiagramProject, faHome, faLanguage, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
+
 
 const Navbar = () => {
   return (
@@ -14,6 +15,7 @@ const Navbar = () => {
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faHome} className='icon-home' />
                             <span>Inicio</span>
+
                         </div>
                     </li>
                 </ul>

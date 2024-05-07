@@ -4,7 +4,7 @@ import me from './me.jpeg'
 
 const Introduction = () => {
   return (
-    <section className='intro-wrapper'>
+    <section className='intro-wrapper' id='introduction-page'>
 
           <div className='intro-container' >
 
