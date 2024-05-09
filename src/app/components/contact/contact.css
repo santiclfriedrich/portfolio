@@ -19,14 +19,6 @@
     text-align: center;
 }
 
-.contact-container p{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    padding: 1%;
-    padding-bottom: 4%;
-}
-
 .contact{
     display: flex;
     justify-content: space-between;
@@ -66,29 +58,160 @@
     padding-top: 20px;
 }
 
-.image-contact p{
-    text-align: end;
-    color: rgba(147, 112, 219, 1);
-}
 
-.image-p{
-    display: flex;
-    flex-direction: column;
-}
 .contact-left .contact-subtext{
+    color: rgba(147, 112, 219, 1);
     font-size: 16px;
     text-align: center;
     padding-left: 25px;
+    padding-top: 1%;
 }
 
 .contact-left .contact-descrip{
+    color: white;
     font-size: 16px;
     text-align: start;
     padding: 0 25px;
+    padding-bottom: 4%;
 }
 
 .contact-right{
-    background-color: #722f37 ;
     height: 60vh;
     width: 50%;
+    display: flex;
+    display: flex;
+    flex-direction: column;
 }
+
+.email-sec{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 29px;
+}
+
+.email-content{
+    display: flex;
+    align-items: center;
+}
+
+.email-icon{
+    color: white;
+    font-size: 18px;
+}
+
+.email-title{
+    color: white;
+    padding-left: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.email-buttons-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+.copy-button{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(10, 10, 10);
+    height: 25px;
+    padding: 20px 15px; 
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.copy-button span{
+    margin-right: 5px;
+}
+
+.copy-button .copy-icon{
+    margin-left: 5px;
+}
+
+.copy-button .check-icon{
+    margin-left: 5px;
+}
+
+.redact-button{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(10, 10, 10);
+    height: 25px;
+    padding: 20px 15px;
+    margin-left: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.redact-button span{
+    margin-right: 5px;
+}
+
+.redact-button .pen-icon{
+    margin-left: 5px;
+}
+
+/*------------------CV---------------*/
+
+.cv-sec, .pro-sec{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.cv-content, .pro-content{
+    display: flex;
+    align-items: center;
+}
+
+.cv-icon, .pro-icon{
+    color: white;
+    font-size: 18px;
+}
+
+.cv-title, .pro-title{
+    color: white;
+    padding-left: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cv-buttons-container{
+    display: flex;
+    margin-top: 10px;
+}
+
+.pro-buttons-container{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.cv-button, .pro-button, .pro-button2{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(10, 10, 10);
+    height: 25px;
+    padding: 20px 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.cv-button span, .pro-button span, .pro-button2 span{
+    margin-right: 5px;
+}
+
+.cv-button .pdf-icon, .pro-button .linkedin-icon, .pro-button2 .github-icon{
+    margin-left: 5px;
+}
+
+.pro-button2{
+    margin-top: 10px;
+}
+

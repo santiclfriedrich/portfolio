@@ -1,0 +1,56 @@
+.footer-wrapper{
+    margin-top: 4%;
+    height: 15vh;
+    background-color: rgb(10, 10, 10);
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.icons-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.icon-linkedin{
+    font-size: 20px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon-linkedin:hover{
+    color: rgb(48, 51, 53);
+}
+
+.icon-github{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon-github:hover{
+    color: rgb(48, 51, 53);
+}
+
+.icon-mail{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon-mail:hover{
+    color: rgb(48, 51, 53);
+}
+
+.footer-text{
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
