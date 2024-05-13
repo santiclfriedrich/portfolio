@@ -3,14 +3,20 @@ import { FaLinkedin, FaGithub,  } from 'react-icons/fa'
 import { MdOutlineMail } from "react-icons/md";
 import './footer.css'
 import Link from 'next/link';
+import { useStoreLanguage } from '@/app/zustand';
 
 const Footer = () => {
 
   const email = 'santiago.claros.f@gmail.com'
+  const { currentLanguage } = useStoreLanguage()
 
   const handleMail = () =>{
     window.location.href = `mailto:${email}`
   }
+
+  const copyright = currentLanguage === 'es'
+  ? 'Copyright © Santiago Friedrich. Todos los derechos reservados.'
+  : 'Copyright © Santiago Friedrich. All rights reserved.'
 
   return (
     <div className='footer-wrapper'>
@@ -33,7 +39,7 @@ const Footer = () => {
 
           </div>
 
-          <p className='footer-text'>Copyright © Santiago Friedrich. Todos los derechos reservados.</p>
+          <p className='footer-text'>{copyright}</p>
 
         </div> 
     </div>

@@ -3,9 +3,15 @@ import './navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiagramProject, faHome, faLanguage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
-
+import { useStoreLanguage } from '@/app/zustand';
 
 const Navbar = () => {
+
+    const { changeCurrentLanguage, currentLanguage } = useStoreLanguage();
+
+    const fnChangeCurrentLanguage = () => {
+        changeCurrentLanguage()
+    }
 
 
     const scrollToSection = (sectionId) => {
@@ -18,6 +24,11 @@ const Navbar = () => {
         }
     }
 
+    const home = currentLanguage === 'es' ? 'Inicio' : 'Home';
+    const about = currentLanguage === 'es' ? 'Sobre Mi' : 'About';
+    const projects = currentLanguage === 'es' ? 'Proyectos' : 'Projects';
+    const contact = currentLanguage === 'es' ? 'Contacto' : 'Contact';
+
 
   return (
     
@@ -29,7 +40,7 @@ const Navbar = () => {
                     <li onClick={() => scrollToSection('introduction-page') }>     
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faHome} className='icon-home' />
-                            <span>Inicio</span>
+                            <span>{home}</span>
 
                         </div>
                     </li>
@@ -39,7 +50,7 @@ const Navbar = () => {
                     <li onClick={() => scrollToSection('about-page') }>
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faAddressCard} className='icon-aboutme' />
-                            <span>Sobre mí</span>
+                            <span>{about}</span>
                         </div>
                         
                     </li>
@@ -49,7 +60,7 @@ const Navbar = () => {
                     <li onClick={() => scrollToSection('projects-page') }>
                     <div className='nav-item' >
                         <FontAwesomeIcon icon={faDiagramProject} className='icon-projects' />
-                        <span>Proyectos</span>
+                        <span>{projects}</span>
                         </div>
                     </li>
                 </ul>
@@ -58,17 +69,24 @@ const Navbar = () => {
                     <li onClick={() => scrollToSection('contact-page') }>
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faPhone} className='icon-contact' />
-                            <span>Contacto</span>
+                            <span>{contact}</span>
                         </div>
                     </li>
                 </ul>
 
                 <ul>
                     <li className='item-language'>
-                        <div className='nav-item' >
-                            <FontAwesomeIcon icon={faLanguage} className='icon-language' />
+                        {currentLanguage === 'es' ? (
+                        <div className='nav-item' onClick={fnChangeCurrentLanguage} >
+                            <FontAwesomeIcon icon={faLanguage} className='icon-language'/>
                             <span>En</span>
                         </div>
+                        ) : (
+                            <div className='nav-item' onClick={fnChangeCurrentLanguage} >
+                            <FontAwesomeIcon icon={faLanguage} className='icon-language' />
+                            <span>Es</span>
+                        </div>
+                        )}
                     </li>
                 </ul>
 

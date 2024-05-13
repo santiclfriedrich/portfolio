@@ -8,12 +8,15 @@ import { FaCopy, FaCheck, FaPen, FaAddressCard, FaLinkedin, FaGithub } from "rea
 import { FaRegFilePdf } from "react-icons/fa6";
 import { PiBagSimpleFill } from "react-icons/pi";
 import Link from 'next/link';
+import { useStoreLanguage } from '@/app/zustand';
 
 
 const Contact = () => {
 
   const [email, setEmail] = useState('santiago.claros.f@gmail.com')
   const [copied, setCopied] = useState(false)
+
+  const {currentLanguage} = useStoreLanguage()
 
   const copyToClipBoard = () => {
     navigator.clipboard.writeText(email)
@@ -32,11 +35,25 @@ const Contact = () => {
     window.location.href = `mailto:${email}`
   }
 
+  const title = currentLanguage === 'es' ? 'Contacto' : 'Contact'
+  const paragraph1 = currentLanguage === 'es'
+  ? 'Descubrí la programación luego de terminar la secundaria y desde ese momento me propuse a aprender de manera autodidacta y con varios cursos.'
+  : 'After high school, I turned into the world of programming, embarking on a journey of self-directed learning and enrolling in multiple courses to expand my knowledge.'
+
+  const paragraph2 = currentLanguage === 'es'
+  ? 'Cuento con experiencia en proyectos personales y actualmente me encuentro preparado para demostrar y desarrollar mis habilidades en un ambiente laboral.'
+  : 'I have experience from personal projects and am now ready to showcase and elevate my skills in a professional environment.'
+
+  const copy = currentLanguage === 'es' ? 'Copiar' : 'Copy'
+  const compose = currentLanguage === 'es' ? 'Contactar' : 'Compose'
+  const spanish = currentLanguage === 'es' ? 'Español' : 'Spanish'
+  const professional = currentLanguage === 'es' ? 'Profesional' : 'Professional'
+
   return (
     <div className='contact-wrapper' id='contact-page'>
         <div className='contact-container'>
 
-        <h2>Contacto</h2>
+        <h2>{title}</h2>
 
         <div className='contact'>
           <div className='contact-left'>
@@ -44,12 +61,12 @@ const Contact = () => {
                   <Image src={me} className='image-me' />
                   <div className='text-container'>
                     <h3>Santiago Friedrich</h3>
-                    <p className='contact-subtext'>Full Stack Dev</p>
+                    <p className='contact-subtext'>Software Dev</p>
                   </div>            
                 </div>
                 
-                <p className='contact-descrip'>Descubrí la programación luego de terminar la secundaria y desde ese momento me propuse a aprender de manera autodidacta y con varios cursos.  </p>
-                <p className='contact-descrip'> Cuento con experiencia en proyectos personales y actualmente me encuentro preparado para demostrar y desarrollar mis habilidades en un ambiente laboral. </p>
+                <p className='contact-descrip'>{paragraph1}</p>
+                <p className='contact-descrip'> {paragraph2} </p>
 
                 
           </div>
@@ -64,11 +81,11 @@ const Contact = () => {
 
                     <div className='email-buttons-container'>
                     <button className='copy-button' onClick={copyToClipBoard} >
-                      <span>Copiar</span>
-                      { copied ? <FaCheck className='check-icon' />  : <FaCopy className='copy-icon' /> }
+                      <span>{copy}</span>
+                      {   copied ? <FaCheck className='check-icon' />  : <FaCopy className='copy-icon' /> }
                     </button>
                     <button className='redact-button' onClick={handleRedactClick}>
-                      <span>Contactar</span>
+                      <span>{compose}</span>
                       <FaPen className='pen-icon' />
                     </button>
                     </div>    
@@ -87,7 +104,7 @@ const Contact = () => {
                     
                     <Link href={`https://drive.google.com/file/d/1w63jt_CsHE1BV_p2k4nXC9D8EhQ3XXWF/view?usp=sharing`} target='_blank'>
                     <button className='cv-button'>
-                      <span>Español</span>
+                      <span>{spanish}</span>
                       <FaRegFilePdf className='pdf-icon' />
                     </button>
                     </Link>
@@ -101,7 +118,7 @@ const Contact = () => {
 
                   <div className='pro-content'>
                   <PiBagSimpleFill className='pro-icon' />
-                    <p className='pro-title'>Profesional</p>
+                    <p className='pro-title'>{professional}</p>
                   </div>  
 
                     <div className='pro-buttons-container'>

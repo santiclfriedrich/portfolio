@@ -1,8 +1,16 @@
+'use client'
 import './introduction.css'
 import Image from 'next/image'
 import me from './me.jpeg'
+import { useStoreLanguage } from '@/app/zustand'
 
 const Introduction = () => {
+
+  const { currentLanguage } = useStoreLanguage()
+
+  const present1 = currentLanguage === 'es' ? 'Desarrollador Web' : 'Full-Stack Web';
+  const present2 = currentLanguage === 'es' ? 'Full-Stack' : 'Developer';
+
   return (
     <section className='intro-wrapper' id='introduction-page'>
 
@@ -14,8 +22,8 @@ const Introduction = () => {
 
             <div className='intro-header'>
                 <h1>Santiago Friedrich</h1>
-                <h3>Desarrollador Web</h3>
-                <h4>Full-Stack</h4>
+                <h3>{present1}</h3>
+                <h4>{present2}</h4>
             </div>
 
           </div>
