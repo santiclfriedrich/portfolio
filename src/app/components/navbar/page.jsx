@@ -1,13 +1,23 @@
 "use client"
 import './navbar.css'
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiagramProject, faHome, faLanguage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import BurgerMenu from './burguer/burguer';
+import { HiMiniCodeBracket } from "react-icons/hi2"; 
 import { useStoreLanguage } from '@/app/zustand';
+
 
 const Navbar = () => {
 
     const { changeCurrentLanguage, currentLanguage } = useStoreLanguage();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     const fnChangeCurrentLanguage = () => {
         changeCurrentLanguage()
@@ -34,9 +44,15 @@ const Navbar = () => {
     
     
         <nav className='navbar'>
-            <div className='nav-container'>         
+
+            <div className='nav-container'> 
+
+            <div className="left-icons-mobile">
+                <HiMiniCodeBracket className='icon-left' />
+            </div>
+  
             
-                <ul>    
+                <ul className='nav-links-items'>    
                     <li onClick={() => scrollToSection('introduction-page') }>     
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faHome} className='icon-home' />
@@ -46,7 +62,7 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                <ul>
+                <ul className='nav-links-items'>
                     <li onClick={() => scrollToSection('about-page') }>
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faAddressCard} className='icon-aboutme' />
@@ -56,7 +72,7 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                <ul>
+                <ul className='nav-links-items'>
                     <li onClick={() => scrollToSection('projects-page') }>
                     <div className='nav-item' >
                         <FontAwesomeIcon icon={faDiagramProject} className='icon-projects' />
@@ -65,7 +81,7 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                <ul>
+                <ul className='nav-links-items'>
                     <li onClick={() => scrollToSection('contact-page') }>
                         <div className='nav-item' >
                             <FontAwesomeIcon icon={faPhone} className='icon-contact' />
@@ -90,7 +106,10 @@ const Navbar = () => {
                     </li>
                 </ul>
 
-                
+                <div className='burger-menu-container'> {/* Agrega un contenedor para el menú de hamburguesas */}
+                    <BurgerMenu isOpen={isOpen} toggleMenu={toggleMenu} scrollToSection={scrollToSection} />
+                </div>
+
 
                 </div>
            

@@ -1,0 +1,54 @@
+/* En tu archivo burger.css */
+
+/* Estilos para el botón de la hamburguesa */
+.burger-menu {
+    display: none; /* Ocultar el botón en pantallas grandes */
+    cursor: pointer;
+}
+
+/* Estilos para los íconos de la hamburguesa */
+.burger-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    color: rgba(147, 112, 219, 1); /* Color del ícono */
+}
+
+/* Estilos para la lista de enlaces en el "burger menu" */
+.burger-menu-links {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.96);/* Color de fondo para la lista de enlaces */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para la lista de enlaces */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    max-height: 0; /* Oculta la lista inicialmente */
+    transition: max-height 0.3s ease-in-out;
+    position: absolute; /* Asegura que la lista se posicione correctamente */
+    top: 100%; /* Coloca la lista justo debajo del icono de la hamburguesa */
+    left: 0; /* Alinea la lista con el borde izquierdo del icono de la hamburguesa */
+    width: 100%; /* Ajusta el ancho para que coincida con el contenedor */
+    z-index: 99;
+}
+
+.burger-menu-links li {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre elementos */
+    color: white;
+}
+
+/* Estilos para animar el despliegue del menú */
+.burger-menu-links.active {
+    max-height: 500px; /* Altura máxima cuando está activo */
+}
+
+
+/* Media query para mostrar el botón de la hamburguesa en dispositivos móviles */
+@media (max-width: 820px) {
+    .burger-menu {
+        display: flex; /* Mostrar el botón en dispositivos móviles */
+    }
+
+}
+
+
