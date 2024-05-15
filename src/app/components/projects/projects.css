@@ -110,6 +110,7 @@
 
     .details h4 {
         font-size: 18px;
+        padding-top: 0;
     }
 
     .details .subt {
@@ -121,21 +122,63 @@
     }
 
     .projects {
+        display: flex;
+        flex-direction: column;
         margin: 0 auto; /* Márgenes automáticos en los laterales para centrar */
         margin-left: 20px; /* Margen a la izquierda para crear un cuadro centrado */
         margin-right: 20px;
+        padding: 0;
     }
 
     
-    .image-container {
-        width: 80%; /* Anchura relativa al contenedor */
-        max-width: 300px; /* Anchura máxima */
-        margin: 0 auto 20px; /* Márgenes automáticos en los laterales y espacio en la parte inferior */
+    .projects-detail{
+        padding: 0px 20px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .details{
+        margin-bottom: 25px;
+    }
+
+    .image-container, .projects-detail{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .image-container{
+        margin-bottom: -10px;
     }
 
     .image-project {
         width: 100%; /* Para asegurarse de que la imagen se ajuste al contenedor */
     }
-    
+ 
 
 }
+
+@media (max-width: 425px) {
+    .image-container {
+        margin-bottom: -70px; /* Margen negativo para compensar el espacio */
+    }
+
+    .projects-detail {
+        margin-top: 20px; /* Ajusta el margen superior del contenedor de detalles */
+        margin-bottom: 0; /* Elimina cualquier margen inferior */
+    }
+}
+
+@media (max-width: 375px) {
+    .image-container {
+        margin-bottom: -100px; /* Margen negativo para compensar el espacio */
+    }
+
+    .projects-detail {
+        margin-top: 20px; /* Ajusta el margen superior del contenedor de detalles */
+        margin-bottom: 0; /* Elimina cualquier margen inferior */
+    }
+}
+
