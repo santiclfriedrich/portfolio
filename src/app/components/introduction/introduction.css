@@ -2,7 +2,9 @@
     padding-top: 5%;
     height: 100vh;
     padding-bottom: 5%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-container{
@@ -48,3 +50,25 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+
+    .intro-wrapper{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .intro-image img {
+        width: 170px;
+        height: 150px;
+    }
+
+    /* Ajusta el tamaño y el espaciado de los encabezados para dispositivos móviles */
+    .intro-header h1 {
+        font-size: 32px;
+    }
+
+    .intro-header h3,
+    .intro-header h4 {
+        font-size: 22px;
+    }
+}

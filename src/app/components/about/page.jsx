@@ -89,69 +89,69 @@ const technologysub = currentLanguage === 'es'
               <div className='container-grid'>
 
                   <div className='technology' >
-                      <IoLogoJavascript className='icon-js' />
+                      <IoLogoJavascript className='icon-js icons' />
                   </div>
 
                   <div className='technology' >
-                      <FaReact className='icon-react' />
+                      <FaReact className='icon-react icons' />
                   </div>
 
                   <div className='technology' >
-                      <FaNode className='icon-node' />
-                  </div>
-
-
-                  <div className='technology' >
-                      <SiNextdotjs className='icon-next' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiRedux className='icon-redux' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiExpress className='icon-express' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiTailwindcss className='icon-tailw' />
-                  </div>
-
-                  <div className='technology' >
-                      <FaGitAlt className='icon-git' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiVite className='icon-vite' />
+                      <FaNode className='icon-node icons' />
                   </div>
 
 
                   <div className='technology' >
-                      <FaHtml5 className='icon-html' />
+                      <SiNextdotjs className='icon-next icons' />
                   </div>
 
                   <div className='technology' >
-                      <FaCss3Alt className='icon-css' />
+                      <SiRedux className='icon-redux  icons' />
                   </div>
 
                   <div className='technology' >
-                      <FaBootstrap className='icon-boots' />
+                      <SiExpress className='icon-express icons' />
                   </div>
 
                   <div className='technology' >
-                      <BiLogoPostgresql className='icon-postgre' />
+                      <SiTailwindcss className='icon-tailw icons' />
                   </div>
 
                   <div className='technology' >
-                      <DiMongodb className='icon-mongo' />
+                      <FaGitAlt className='icon-git icons' />
                   </div>
 
                   <div className='technology' >
-                      <SiSequelize className='icon-seq' />
+                      <SiVite className='icon-vite icons' />
+                  </div>
+
+
+                  <div className='technology' >
+                      <FaHtml5 className='icon-html icons' />
                   </div>
 
                   <div className='technology' >
-                      <FaGithub className='icon-github' />
+                      <FaCss3Alt className='icon-css icons' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaBootstrap className='icon-boots icons' />
+                  </div>
+
+                  <div className='technology' >
+                      <BiLogoPostgresql className='icon-postgre icons' />
+                  </div>
+
+                  <div className='technology' >
+                      <DiMongodb className='icon-mongo icons' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiSequelize className='icon-seq icons' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaGithub className='icon-github icons' />
                   </div>
 
               </div>
