@@ -50,22 +50,22 @@ const technologysub = currentLanguage === 'es'
 
 
   return (
-    <div className='about-container' id='about-page' >
+    <div className='about-container sm:px-6 lg:px-8 ' id='about-page' >
 
-        <div className='about-content' >
-            <h2>{title}</h2>
+        <div className='about-content max-w-3xl mx-auto ' >
+            <h2 className='sm:text-sm lg:text-5xl font-semibold mb-4 text-center'>{title}</h2>
 
-            <div className='about-description'>
+            <div className='about-description space-y-2 text-center'>
                   <p>{paragraph1}</p>
                   <p className='pt-5'> {paragraph2} </p>
                   <p className='pt-5'> {paragraph3}</p>
             </div>
 
-            <div className='about-ed-container' >
+            <div className='about-ed-container space-y-2' >
               <div className='about-ed'>
                     <h3>{education}</h3>
 
-                    <div className='about-ed-description'>
+                    <div className='about-ed-description space-y-2 '>
                         <p>{coderhouse}  <span>Coderhouse</span></p>
                         <p className='date'>2021 - 2022</p>
                     </div>
@@ -80,78 +80,78 @@ const technologysub = currentLanguage === 'es'
             
             <div className='technologies-container' >
 
-            <h3>{technology}</h3>
+            <h3 className='text-xl sm:text-2xl lg:text-3xl font-semibold text-center'>{technology}</h3>
 
             <p>{technologysub}</p>
 
             <div className='technologies' >     
 
-              <div className='container-grid'>
+              <div className='container-grid sm:grid-cols-4 gap-5 lg:gap-8 md:gap-8 justify-center items-center sm:w-11/12 md:w-5/6 lg:w-11/12 xl:w-11/12'>
 
                   <div className='technology' >
-                      <IoLogoJavascript className='icon-js icons' />
+                      <IoLogoJavascript className='icon-js icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <FaReact className='icon-react icons' />
+                      <FaReact className='icon-react icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <FaNode className='icon-node icons' />
-                  </div>
-
-
-                  <div className='technology' >
-                      <SiNextdotjs className='icon-next icons' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiRedux className='icon-redux  icons' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiExpress className='icon-express icons' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiTailwindcss className='icon-tailw icons' />
-                  </div>
-
-                  <div className='technology' >
-                      <FaGitAlt className='icon-git icons' />
-                  </div>
-
-                  <div className='technology' >
-                      <SiVite className='icon-vite icons' />
+                      <FaNode className='icon-node icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
 
                   <div className='technology' >
-                      <FaHtml5 className='icon-html icons' />
+                      <SiNextdotjs className='icon-next icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <FaCss3Alt className='icon-css icons' />
+                      <SiRedux className='icon-redux  icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <FaBootstrap className='icon-boots icons' />
+                      <SiExpress className='icon-express icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <BiLogoPostgresql className='icon-postgre icons' />
+                      <SiTailwindcss className='icon-tailw icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <DiMongodb className='icon-mongo icons' />
+                      <FaGitAlt className='icon-git icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <SiSequelize className='icon-seq icons' />
+                      <SiVite className='icon-vite icons text-4xl sm:text-5xl lg:text-6xl' />
+                  </div>
+
+
+                  <div className='technology' >
+                      <FaHtml5 className='icon-html icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
                   <div className='technology' >
-                      <FaGithub className='icon-github icons' />
+                      <FaCss3Alt className='icon-css icons text-4xl sm:text-5xl lg:text-6xl text-4xl sm:text-5xl lg:text-6xl' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaBootstrap className='icon-boots icons text-4xl sm:text-5xl lg:text-6xl' />
+                  </div>
+
+                  <div className='technology' >
+                      <BiLogoPostgresql className='icon-postgre icons text-4xl sm:text-5xl lg:text-6xl' />
+                  </div>
+
+                  <div className='technology' >
+                      <DiMongodb className='icon-mongo icons text-4xl sm:text-5xl lg:text-6xl' />
+                  </div>
+
+                  <div className='technology' >
+                      <SiSequelize className='icon-seq icons text-4xl sm:text-5xl lg:text-6xl' />
+                  </div>
+
+                  <div className='technology' >
+                      <FaGithub className='icon-github icons text-4xl sm:text-5xl lg:text-6xl' />
                   </div>
 
               </div>

@@ -39,7 +39,7 @@ const Projects = () => {
             <div className='projects'>
 
                   
-                  <div className='image-container'>
+                  <div className='image-container '>
                     <Link href={`https://vorttex-gaming-topabli2-topablis-projects.vercel.app/`}>
                     <Image className='image-project' src={vortex} alt='project-photo' />
                     </Link>
@@ -48,8 +48,8 @@ const Projects = () => {
                   <div className='projects-detail'>
                   <div className='details'>
                   <h4>Vorttex Gaming</h4>     
-                    <p className='subt'>{aboutSubVortex}</p>
-                    <p className='desc'>{aboutVortex}</p>
+                    <p className='subt text-sm md:text-base'>{aboutSubVortex}</p>
+                    <p className='desc text-sm md:text-base'>{aboutVortex}</p>
                   </div>
 
                   </div>  
