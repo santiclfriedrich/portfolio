@@ -285,12 +285,16 @@
 @media (max-width: 320px ){
 
     .about-description{
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .technologies{
         max-width: 300px;
         margin: 0 auto;
+    }
+
+    .technologies-container p{
+        font-size: 14px;
     }
 
     .about-ed{
@@ -306,15 +310,45 @@
 @media (min-width: 321px) and (max-width: 375px) {
 
     .about-ed{
-        max-width: 350px;
+        max-width: 300px;
     }
 
     .about-description{
-        max-width: 320px;
+        max-width: 300px;
+    }
+
+    .technologies {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .about-ed-description, .about-ed-description2{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 424px){
+
+    .about-description{
+        max-width: 300px;
+    }
+
+    .about-ed{
+        max-width: 350px;
+    }
+
+    .technologies-container p{
+        font-size: 14px;
     }
 
     .technologies {
         max-width: 350px;
         margin: 0 auto;
     }
+
+    .about-ed-description, .about-ed-description2{
+        font-size: 14px;
+    }
+
+
 }

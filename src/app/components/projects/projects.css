@@ -160,7 +160,7 @@
 
 }
 
-@media (max-width: 425px) {
+@media (min-width: 376px) and (max-width: 425px) {
     .image-container {
         margin-bottom: -70px; /* Margen negativo para compensar el espacio */
     }
@@ -168,6 +168,16 @@
     .projects-detail {
         margin-top: 20px; /* Ajusta el margen superior del contenedor de detalles */
         margin-bottom: 0; /* Elimina cualquier margen inferior */
+    }
+
+    .projects-container{
+        max-width: 380px;
+    }
+
+    .projects-container p{
+        max-width: 300px;
+        margin: 0 auto;
+        font-size: 15px;
     }
 }
 
@@ -180,5 +190,16 @@
         margin-top: 20px; /* Ajusta el margen superior del contenedor de detalles */
         margin-bottom: 0; /* Elimina cualquier margen inferior */
     }
+
+    .projects-container{
+        max-width: 380px;
+    }
+
+    .projects-container p{
+        max-width: 270px;
+        margin: 0 auto;
+        font-size: 13px;
+    }
+
 }
 
