@@ -86,7 +86,7 @@ const technologysub = currentLanguage === 'es'
 
             <div className='technologies' >     
 
-              <div className='container-grid sm:grid-cols-4 gap-3 lg:gap-8 md:gap-8 justify-center items-center sm:w-11/12 md:w-5/6 lg:w-11/12 xl:w-11/12'>
+              <div className='container-grid sm:grid-cols-4 gap-2 lg:gap-8 md:gap-8 justify-center items-center sm:w-11/12 md:w-5/6 lg:w-11/12 xl:w-11/12'>
 
                   <div className='technology' >
                       <IoLogoJavascript className='icon-js icons text-4xl sm:text-5xl lg:text-6xl' />
