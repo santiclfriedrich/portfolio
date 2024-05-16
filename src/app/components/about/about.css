@@ -309,6 +309,10 @@
 
 @media (min-width: 321px) and (max-width: 375px) {
 
+    .container-grid{
+        gap: 35px;
+    }
+
     .about-ed{
         max-width: 300px;
     }
