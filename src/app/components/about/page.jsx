@@ -25,23 +25,24 @@ const {currentLanguage} = useStoreLanguage();
 const title = currentLanguage === 'es' ? 'Sobre mi' : 'About me';
 
 const paragraph1 = currentLanguage === 'es' 
-? 'Desarrollador web orientado al Front-end con 2 años de experiencia en proyectos personales y académicos, trabajando con tecnologías como React, Node y Nextjs'
+? 'Desarrollador web orientado al Front-end con 3 años de experiencia en proyectos personales y académicos, trabajando con tecnologías como React, Node y Nextjs'
 :
-'Front-end focused web developer with 2 years of experience in personal and academic projects, working with technologies such as React, Node, and Next.js.'
+'Front-end focused web developer with 3 years of experience in personal and academic projects, working with technologies such as React, Node, and Next.js.'
 
 const paragraph2 = currentLanguage === 'es' 
-? 'Me considero una persona con gran resolución de problemas, buena capacidad autocrítica y capaz de trabajar en equipo. '
+? 'A través de una capacitación intensiva en desarrollo de software y habilidades interpersonales con JP Morgan y Fundación Pescar, obtuve una beca para estudiar Ingeniería en Informática en la Universidad del Salvador. También accedí a becas para cursos complementarios en Análisis de Datos y Ciberseguridad, que ampliaron mi formación técnica. '
 :
-'I consider myself a person with great problem-solving skills, good self-critical ability, and capable of working in a team'
+'Through an intensive training program in software development and interpersonal skills with JP Morgan and Fundación Pescar, I was awarded a scholarship to study Computer Engineering at Universidad del Salvador. I also received additional scholarships for complementary courses in Data Analysis and Cybersecurity, which expanded my technical education.'
 
 const paragraph3 = currentLanguage === 'es' 
-? 'Actualmente me encuentro estudiando y practicando de manera autodidacta, en busca de una oportunidad en el área del desarrollo web. '
+? 'Me destaco por mi capacidad para resolver problemas, la autocrítica y el trabajo en equipo. Actualmente sigo perfeccionándome de manera autodidacta y busco mi primera oportunidad profesional como desarrollador.'
 :
-'Currently, I am studying and practicing self-taught, in search of an opportunity in the web development field.'
+'I stand out for my problem-solving skills, self-criticism, and ability to work in a team. I am currently continuing to improve through self-learning and seeking my first professional opportunity as a developer.'
 
 const education = currentLanguage === 'es' ? 'Educación' : 'Education'
 const coderhouse = currentLanguage === 'es' ? "Carrera de Desarrollo Full stack" : 'Full Stack Development Career'
-const henry = currentLanguage === 'es' ? 'Desarrollo Full Stack' : 'Full Stack Development'
+const pescar = currentLanguage === 'es' ? 'Desarrollo Full Stack + Habilidades Interpersonales' : 'Full Stack Development + Soft Skills'
+const usal = currentLanguage === 'es' ? 'Carrera de Ingeniería en Informática' : 'Computer Engineering Studies'
 
 const technology = currentLanguage === 'es' ? 'Tecnologías' : 'Technologies'
 const technologysub = currentLanguage === 'es'
@@ -65,14 +66,21 @@ const technologysub = currentLanguage === 'es'
               <div className='about-ed'>
                     <h3>{education}</h3>
 
+                    
+
                     <div className='about-ed-description space-y-2 '>
-                        <p>{coderhouse}  <span>Coderhouse</span></p>
-                        <p className='date'>2021 - 2022</p>
+                        <p>{usal}  <span>Universidad del Salvador</span></p>
+                        <p className='date'>2025</p>
                     </div>
 
                     <div className='about-ed-description2'>
-                        <p>{henry}  <span>Henry</span></p>
-                        <p className='date'> 2023 </p>
+                        <p>{pescar}  <span>JP Morgan - Pescar</span></p>
+                        <p className='date'> 2024 </p>
+                    </div>
+
+                    <div className='about-ed-description3 space-y-2 '>
+                        <p>{coderhouse}  <span>Coderhouse</span></p>
+                        <p className='date'>2021 - 2022</p>
                     </div>
 
               </div>

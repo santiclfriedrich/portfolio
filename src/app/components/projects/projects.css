@@ -47,7 +47,13 @@
 .projects{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+.project-container{
+    margin: 20px 0;
     background-color: rgb(10, 10, 10);
+    padding: 20px;
 }
 
 .image-container{

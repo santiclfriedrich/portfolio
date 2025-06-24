@@ -56,7 +56,7 @@
     flex-direction: column;
 }
 
-.about-ed-description p, .about-ed-description2 p {
+.about-ed-description p, .about-ed-description2 p, .about-ed-description3 p {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +69,7 @@
     font-size: 15px;
 }
 
-.about-ed-description2{
+.about-ed-description2, .about-ed-description3{
     background-color: rgb(10, 10, 10);
     color: white;
     font-size: 20px;
@@ -79,11 +79,11 @@
     flex-direction: column;
 }
 
-.about-ed-description2 p span{
+.about-ed-description2 p span, .about-ed-description3 p span{
     color: rgba(147, 112, 219, 1);
 }
 
-.about-ed-description2 .date{
+.about-ed-description2 .date, .about-ed-description3 .date{
     font-size: 15px;
 }
 
