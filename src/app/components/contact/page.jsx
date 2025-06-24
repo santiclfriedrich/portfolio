@@ -102,7 +102,7 @@ const Contact = () => {
 
                     <div className='cv-buttons-container'>
                     
-                    <Link href={`https://drive.google.com/file/d/1w63jt_CsHE1BV_p2k4nXC9D8EhQ3XXWF/view?usp=sharing`} target='_blank'>
+                    <Link href={`https://drive.google.com/file/d/1agaZDTTLvUlli4KH5ybxTeByeUZ72Q0R/view?usp=drive_link`} target='_blank'>
                     <button className='cv-button'>
                       <span>{spanish}</span>
                       <FaRegFilePdf className='pdf-icon' />
