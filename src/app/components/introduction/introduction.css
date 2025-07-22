@@ -9,9 +9,11 @@
 
 .intro-container{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
     padding-top: 8.5%;
 }
 
@@ -24,7 +26,7 @@
 }
 
 .intro-header h1{ 
-  padding-top: 5%;  
+  padding-top: 1rem;  
   font-size: 35px;
   font-weight: 800;  
   color: white;
@@ -34,7 +36,7 @@
 .intro-header h3{
     font-family:Arial, Helvetica, sans-serif;
     font-style: italic;
-    padding-top: 5%;
+    padding-top: 1rem;
     font-size: 43px;
     color: rgba(147, 112, 219, 1);
     font-weight: lighter;

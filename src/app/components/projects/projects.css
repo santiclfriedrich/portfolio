@@ -107,8 +107,10 @@
 @media (max-width: 768px) {
 
     .projects-container h2 {
-        font-size: 35px;
+        font-size: 25px;
     }
+
+    
 
     .icon-buffer {
         font-size: 18px;
