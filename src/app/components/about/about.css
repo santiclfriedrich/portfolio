@@ -46,46 +46,41 @@
     text-align: center;
 }
 
-.about-ed-description{
-    background-color: rgb(10, 10, 10);
-    color: white;
-    font-size: 20px;
-    display: flex;
-    padding: 4%;
-    margin-top: 4%;  
-    flex-direction: column;
+.about-ed-description,
+.about-ed-description2,
+.about-ed-description3 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  font-size: 20px;
+  padding: 4%;
+  margin-top: 4%;
 }
 
-.about-ed-description p, .about-ed-description2 p, .about-ed-description3 p {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.about-ed-description > div,
+.about-ed-description2 > div,
+.about-ed-description3 > div {
+  display: flex;
+  justify-content: space-between;
 }
 
-.about-ed-description p span {
-    color: rgba(147, 112, 219, 1);
-}
-.about-ed-description .date{
-    font-size: 15px;
+.left-text {
+  flex: 1;
 }
 
-.about-ed-description2, .about-ed-description3{
-    background-color: rgb(10, 10, 10);
-    color: white;
-    font-size: 20px;
-    display: flex;
-    padding: 4%;
-    margin-top: 1%; 
-    flex-direction: column;
+.right-text {
+  flex: 1;
+  text-align: right;
+  color: rgba(147, 112, 219, 1);
 }
 
-.about-ed-description2 p span, .about-ed-description3 p span{
-    color: rgba(147, 112, 219, 1);
+.date {
+  font-size: 15px;
+  margin-top: 5px;
+  text-align: right;
 }
 
-.about-ed-description2 .date, .about-ed-description3 .date{
-    font-size: 15px;
-}
 
 /*-------------------TECHNOLOGIES-------------------*/
 
@@ -246,7 +241,8 @@
     }
 
     .about-ed-description,
-    .about-ed-description2 {
+    .about-ed-description2,
+    .about-ed-description3 {
         font-size: 16px;
     }
 

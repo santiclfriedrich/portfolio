@@ -1,7 +1,7 @@
 'use client'
 import './introduction.css'
 import Image from 'next/image'
-import me from './me.jpeg'
+import me from './intro-me.jpeg'
 import { useStoreLanguage } from '@/app/zustand'
 
 const Introduction = () => {

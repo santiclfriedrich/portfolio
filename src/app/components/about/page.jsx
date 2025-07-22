@@ -69,18 +69,21 @@ const technologysub = currentLanguage === 'es'
                     
 
                     <div className='about-ed-description space-y-2 '>
-                        <p>{usal}  <span>Universidad del Salvador</span></p>
-                        <p className='date'>2025</p>
+                        <div className="left-text">{usal}</div>
+                        <div className="right-text">Universidad del Salvador</div>
+                        <p className="date">2025</p>
                     </div>
 
                     <div className='about-ed-description2'>
-                        <p>{pescar}  <span>JP Morgan - Pescar</span></p>
-                        <p className='date'> 2024 </p>
+                        <div className="left-text">{pescar}</div>
+                        <div className="right-text">JP Morgan - Pescar</div>
+                        <p className="date">2024</p>
                     </div>
 
                     <div className='about-ed-description3 space-y-2 '>
-                        <p>{coderhouse}  <span>Coderhouse</span></p>
-                        <p className='date'>2021 - 2022</p>
+                        <div className="left-text">{coderhouse}</div>
+                        <div className="right-text">Coderhouse</div>
+                        <p className="date">2021 - 2022</p>
                     </div>
 
               </div>

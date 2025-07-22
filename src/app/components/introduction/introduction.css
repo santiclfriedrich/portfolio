@@ -17,8 +17,8 @@
 
 .intro-image img{
     width: 180px;
-    height: 160px;
-    border-radius: 100%;
+    height: 180px;
+    border-radius: 50%;
     border: 2px solid rgba(147, 112, 219, 1);
     object-fit: cover;
 }
@@ -58,8 +58,8 @@
     }
 
     .intro-image img {
-        width: 170px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
 
     /* Ajusta el tamaño y el espaciado de los encabezados para dispositivos móviles */
