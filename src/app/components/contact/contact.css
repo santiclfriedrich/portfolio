@@ -1,5 +1,5 @@
 .contact-wrapper{
-    padding-top: 4%;
+    padding-top: 60px;
     padding-bottom: 4%;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -35,8 +35,11 @@
 
 .contact-left{
     width: 50%;
-    height: 60vh;
+    height: auto;
     background-color: rgb(10, 10, 10);
+    border-radius: 12px;
+    border: 1px solid rgba(147, 112, 219, 0.2);
+    overflow: hidden;
 }
 
 .image-contact{
@@ -76,6 +79,10 @@
     text-align: start;
     padding: 0 25px;
     padding-bottom: 4%;
+}
+
+.contact-left .contact-descrip:last-child{
+    padding-bottom: 20px;
 }
 
 .contact-right{
@@ -272,8 +279,12 @@
         font-size: 20px;
     }
     
-    .contact-left, .contact-right {
-        width: 100%; 
+    .contact-left {
+        width: 100%;
+    }
+
+    .contact-right {
+        width: 100%;
         padding: 20px;
     }
 
