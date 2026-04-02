@@ -14,25 +14,20 @@ const Introduction = () => {
   return (
     <section className='intro-wrapper' id='introduction-page'>
 
-          <div className='intro-container' >
+          <div className='intro-container'>
 
-            <div className='intro-image' >
+            <div className='intro-image intro-fade-up' style={{ animationDelay: '0.1s' }}>
               <Image src={me} alt='intro-photo' />
             </div>
 
             <div className='intro-header'>
-                <h1>Santiago Friedrich</h1>
-                <h3>{present1}</h3>
-                <h4>{present2}</h4>
+                <h1 className='intro-fade-up' style={{ animationDelay: '0.2s' }}>Santiago Friedrich</h1>
+                <h3 className='intro-fade-up' style={{ animationDelay: '0.35s' }}>{present1}</h3>
+                <h4 className='intro-fade-up typing-cursor' style={{ animationDelay: '0.5s' }}>{present2}</h4>
             </div>
 
           </div>
 
-          
-          
-        
-        
-        
     </section>
   )
 }

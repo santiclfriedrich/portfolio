@@ -9,6 +9,7 @@ import { FaRegFilePdf } from "react-icons/fa6";
 import { PiBagSimpleFill } from "react-icons/pi";
 import Link from 'next/link';
 import { useStoreLanguage } from '@/app/zustand';
+import { useReveal } from '@/app/hooks/useReveal';
 
 
 const Contact = () => {
@@ -17,6 +18,8 @@ const Contact = () => {
   const [copied, setCopied] = useState(false)
 
   const {currentLanguage} = useStoreLanguage()
+  const refHeader = useReveal(0.1)
+  const refContent = useReveal(0.1)
 
   const copyToClipBoard = () => {
     navigator.clipboard.writeText(email)
@@ -53,76 +56,70 @@ const Contact = () => {
     <div className='contact-wrapper' id='contact-page'>
         <div className='contact-container'>
 
-        <h2>{title}</h2>
+        <h2 ref={refHeader} className='reveal'>{title}</h2>
 
-        <div className='contact'>
+        <div ref={refContent} className='reveal reveal-delay-1 contact'>
           <div className='contact-left'>
                 <div className='image-contact'>
-                  <Image src={me} className='image-me' />
+                  <Image src={me} className='image-me' alt='contact-photo' />
                   <div className='text-container'>
                     <h3>Santiago Friedrich</h3>
                     <p className='contact-subtext'>Software Dev</p>
-                  </div>            
+                  </div>
                 </div>
-                
+
                 <p className='contact-descrip'>{paragraph1}</p>
                 <p className='contact-descrip'> {paragraph2} </p>
 
-                
           </div>
 
           <div className='contact-right'>
-                <div className='email-sec' >
+                <div className='email-sec'>
 
                   <div className='email-content'>
                   <MdOutlineMail className='email-icon' />
                     <p className='email-title'>Email</p>
-                  </div>  
+                  </div>
 
                     <div className='email-buttons-container'>
-                    <button className='copy-button' onClick={copyToClipBoard} >
+                    <button className='copy-button' onClick={copyToClipBoard}>
                       <span>{copy}</span>
-                      {   copied ? <FaCheck className='check-icon' />  : <FaCopy className='copy-icon' /> }
+                      { copied ? <FaCheck className='check-icon' /> : <FaCopy className='copy-icon' /> }
                     </button>
                     <button className='redact-button' onClick={handleRedactClick}>
                       <span>{compose}</span>
                       <FaPen className='pen-icon' />
                     </button>
-                    </div>    
+                    </div>
 
                 </div>
 
-
-                <div className='cv-sec' >
+                <div className='cv-sec'>
 
                   <div className='cv-content'>
                   <FaAddressCard className='cv-icon' />
                     <p className='cv-title'>Curriculum Vitae</p>
-                  </div>  
+                  </div>
 
                     <div className='cv-buttons-container'>
-                    
                     <Link href={`https://drive.google.com/file/d/1agaZDTTLvUlli4KH5ybxTeByeUZ72Q0R/view?usp=drive_link`} target='_blank'>
                     <button className='cv-button'>
                       <span>{spanish}</span>
                       <FaRegFilePdf className='pdf-icon' />
                     </button>
                     </Link>
-                    </div>    
-              
+                    </div>
 
                 </div>
 
-
-                <div className='pro-sec' >
+                <div className='pro-sec'>
 
                   <div className='pro-content'>
                   <PiBagSimpleFill className='pro-icon' />
                     <p className='pro-title'>{professional}</p>
-                  </div>  
+                  </div>
 
                     <div className='pro-buttons-container'>
-                    
                     <Link href={`https://www.linkedin.com/in/santiago-martin-claros-friedrich-122323223/`} target='_blank'>
                     <button className='pro-button'>
                       <span>Linkedin / Santiago</span>
@@ -130,23 +127,22 @@ const Contact = () => {
                     </button>
                     </Link>
 
-                    <Link href={`https://github.com/santiclfriedrich`} target='_blank' >
+                    <Link href={`https://github.com/santiclfriedrich`} target='_blank'>
                     <button className='pro-button2'>
                       <span>Github / Santiago</span>
                       <FaGithub className='github-icon' />
                     </button>
                     </Link>
-                    
-                    </div>    
+
+                    </div>
 
                 </div>
-
 
           </div>
 
         </div>
 
-        </div>     
+        </div>
     </div>
   )
 }

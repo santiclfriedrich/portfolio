@@ -1,5 +1,8 @@
 .contact-wrapper{
     padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: rgb(20, 20, 20);
     height: auto;
 }
@@ -117,10 +120,18 @@
     font-weight: bold;
     background-color: rgb(10, 10, 10);
     height: 25px;
-    padding: 20px 15px; 
+    padding: 20px 15px;
     border: none;
     display: flex;
     align-items: center;
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.copy-button:hover{
+    border-color: rgba(147, 112, 219, 0.5);
+    background-color: rgb(20, 20, 20);
 }
 
 .copy-button span{
@@ -142,9 +153,16 @@
     height: 25px;
     padding: 20px 15px;
     margin-left: 15px;
-    border: none;
+    border: 1px solid transparent;
     display: flex;
     align-items: center;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.redact-button:hover{
+    border-color: rgba(147, 112, 219, 0.5);
+    background-color: rgb(20, 20, 20);
 }
 
 .redact-button span{
@@ -197,10 +215,17 @@
     background-color: rgb(10, 10, 10);
     height: 25px;
     padding: 20px 15px;
-    border: none;
+    border: 1px solid transparent;
     display: flex;
     align-items: center;
     width: fit-content;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.cv-button:hover, .pro-button:hover, .pro-button2:hover{
+    border-color: rgba(147, 112, 219, 0.5);
+    background-color: rgb(20, 20, 20);
 }
 
 .cv-button span, .pro-button span, .pro-button2 span{

@@ -1,5 +1,8 @@
 .about-container{
     padding-top: 4%;
+    padding-bottom: 2%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
     justify-content: center;
     background-color: rgb(20, 20, 20);
@@ -7,6 +10,7 @@
 
 .about-content{
     max-width: 635px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -56,6 +60,15 @@
   font-size: 20px;
   padding: 4%;
   margin-top: 4%;
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.about-ed-description:hover,
+.about-ed-description2:hover,
+.about-ed-description3:hover {
+  border-left-color: rgba(147, 112, 219, 1);
+  background-color: rgb(16, 16, 16);
 }
 
 .about-ed-description > div,
@@ -79,16 +92,37 @@
   font-size: 15px;
   margin-top: 5px;
   text-align: right;
+  color: rgba(200, 200, 200, 0.7);
 }
 
+
+/*-------------------EXPERIENCE-------------------*/
+
+.about-exp-container{
+    display: flex;
+    padding-top: 4%;
+}
+
+.about-exp{
+    width: 100%;
+    padding-top: 5%;
+}
+
+.about-exp h3{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
 
 /*-------------------TECHNOLOGIES-------------------*/
 
 .technologies-container{
     padding-top: 4%;
+    padding-bottom: 2%;
 }
 
-.technologies-container h3{
+.technologies-container > h3{
     color: white;
     font-size: 30px;
     font-weight: 600;
@@ -97,7 +131,7 @@
     padding: 20px 0;
 }
 
-.technologies-container p{
+.technologies-container > p{
     color: white;
     font-size: 20px;
     text-align: center;
@@ -105,122 +139,107 @@
     padding-bottom: 4%;
 }
 
-.technologies{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(10, 10, 10);
+/* ---- Marquee ---- */
+
+@keyframes marquee-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
-.container-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
-    padding: 50px;
+@keyframes marquee-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
 }
 
-.technology{
+.marquee-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    padding: 8px 0;
+}
+
+.marquee-row {
+    overflow: hidden;
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-left 28s linear infinite;
+}
+
+.marquee-track.reverse {
+    animation-name: marquee-right;
+    animation-duration: 32s;
+}
+
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 60px;
-    height: 60px;
-    border: 2px solid;
+    justify-content: center;
+    gap: 8px;
+    width: 88px;
+    height: 88px;
+    margin: 0 10px;
+    background-color: rgb(10, 10, 10);
+    border: 1px solid rgba(147, 112, 219, 0.25);
+    border-radius: 14px;
+    transition: border-color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    cursor: default;
+    flex-shrink: 0;
+}
+
+.marquee-item:hover {
     border-color: rgba(147, 112, 219, 1);
-    border-radius: 5%;
+    background-color: rgb(18, 16, 24);
+    transform: translateY(-4px);
 }
 
-.technology:hover{
-    transform: scale(1.1);
-    transition: .3s;
+.marquee-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
 }
 
-/*-----------------ICONOS-----------------*/
-
-.technology .icon-js{
-    font-size: 30px;
-    color: rgb(241, 222, 79);
+.marquee-label {
+    font-size: 10px;
+    color: rgba(200, 200, 200, 0.7);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    white-space: nowrap;
 }
 
-.technology .icon-react{
-    font-size: 30px;
-    color: rgb(113, 191, 219);
-}
+/* ---- Icon colors (scoped to marquee) ---- */
+.marquee-icon .icon-js     { color: rgb(241, 222, 79); }
+.marquee-icon .icon-react  { color: rgb(113, 191, 219); }
+.marquee-icon .icon-node   { color: rgb(132, 175, 105); }
+.marquee-icon .icon-next   { color: white; }
+.marquee-icon .icon-redux  { color: rgb(112, 76, 182); }
+.marquee-icon .icon-express{ color: white; }
+.marquee-icon .icon-tailw  { color: rgb(96, 166, 177); }
+.marquee-icon .icon-git    { color: rgb(213, 69, 87); }
+.marquee-icon .icon-vite   { color: rgb(131, 160, 249); }
+.marquee-icon .icon-html   { color: rgb(211, 88, 54); }
+.marquee-icon .icon-css    { color: rgb(52, 112, 159); }
+.marquee-icon .icon-boots  { color: rgb(110, 35, 238); }
+.marquee-icon .icon-postgre{ color: rgb(67, 101, 146); }
+.marquee-icon .icon-mongo  { color: rgb(103, 168, 79); }
+.marquee-icon .icon-seq    { color: rgb(78, 172, 233); }
+.marquee-icon .icon-github { color: white; }
 
-.technology .icon-node{
-    font-size: 30px;
-    color: rgb(132, 175, 105);
-}
-
-.technology .icon-next{
-    font-size: 30px;
-    color: white;
-}
-
-.technology .icon-redux{
-    font-size: 30px;
-    color: rgb(112, 76, 182);
-}
-
-.technology .icon-express{
-    font-size: 30px;
-    color: white;
-}
-
-.technology .icon-tailw{
-    font-size: 30px;
-    color: rgb(96, 166, 177);
-}
-
-.technology .icon-git{
-    font-size: 30px;
-    color: rgb(213, 69, 87);
-}
-
-.technology .icon-vite{
-    font-size: 30px;
-    color: rgb(131, 160, 249);
-}
-
-.technology .icon-html{
-    font-size: 30px;
-    color: rgb(211, 88, 54);
-}
-
-.technology .icon-css{
-    font-size: 30px;
-    color: rgb(52, 112, 159);
-}
-
-.technology .icon-boots{
-    font-size: 30px;
-    color: rgb(110, 35, 238);
-}
-
-.technology .icon-mongo{
-    font-size: 30px;
-    color: rgb(103, 168, 79);
-}
-
-.technology .icon-postgre{
-    font-size: 30px;
-    color: rgb(67, 101, 146);
-}
-
-.technology .icon-seq{
-    font-size: 30px;
-    color: rgb(78, 172, 233);
-}
-
-.technology .icon-github{
-    font-size: 30px;
-    color: white;
-}
+/* ---- Responsive ---- */
 
 @media (max-width: 768px) {
-
-    .technology svg{
-        font-size: 20px;
-    }
 
     .about-description{
         max-width: 400px;
@@ -236,7 +255,8 @@
     }
 
     .about-ed h3,
-    .technologies-container h3 {
+    .about-exp h3,
+    .technologies-container > h3 {
         font-size: 24px;
     }
 
@@ -246,7 +266,7 @@
         font-size: 16px;
     }
 
-    .technologies-container p {
+    .technologies-container > p {
         font-size: 16px;
     }
 
@@ -258,97 +278,43 @@
         margin: 0 auto;
     }
 
-    .container-grid{
-        gap: 40px;
+    .marquee-item {
+        width: 72px;
+        height: 72px;
+        margin: 0 7px;
     }
 
-    .technologies{
-        max-width: 400px;
-    }
-
-    .technology{
-        width: 40px;
-        height: 40px;
-    }
-
-    .technology .icons{
-        font-size: 20px;
-    }
-
-
-}
-
-@media (max-width: 320px ){
-
-    .about-description{
-        max-width: 280px;
-    }
-
-    .technologies{
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .technologies-container p{
-        font-size: 14px;
-    }
-
-    .about-ed{
-        max-width: 300px;
-    }
-
-
-    .about-ed-description, .about-ed-description2{
-        font-size: 14px;
+    .marquee-icon {
+        font-size: 22px;
     }
 }
 
-@media (min-width: 321px) and (max-width: 375px) {
-
-    .container-grid{
-        gap: 35px;
-    }
-
-    .about-ed{
-        max-width: 300px;
-    }
+@media (max-width: 375px) {
 
     .about-description{
         max-width: 300px;
     }
 
-    .technologies {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .about-ed-description, .about-ed-description2{
+    .about-ed-description,
+    .about-ed-description2,
+    .about-ed-description3 {
         font-size: 13px;
     }
-}
 
-@media (min-width: 376px) and (max-width: 424px){
-
-    .about-description{
-        max-width: 300px;
+    .technologies-container > p{
+        font-size: 14px;
     }
 
     .about-ed{
-        max-width: 350px;
+        max-width: 300px;
     }
 
-    .technologies-container p{
-        font-size: 14px;
+    .marquee-item {
+        width: 64px;
+        height: 64px;
     }
 
-    .technologies {
-        max-width: 350px;
-        margin: 0 auto;
+    .marquee-icon {
+        font-size: 19px;
     }
-
-    .about-ed-description, .about-ed-description2{
-        font-size: 14px;
-    }
-
-
 }

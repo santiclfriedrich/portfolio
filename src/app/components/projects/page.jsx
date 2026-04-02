@@ -6,10 +6,12 @@ import talleres from './talleres.png'
 import Link from 'next/link'
 import { FaBuffer } from "react-icons/fa";
 import { useStoreLanguage } from '@/app/zustand';
+import { useReveal } from '@/app/hooks/useReveal';
 
 const Projects = () => {
 
   const { currentLanguage } = useStoreLanguage()
+  const refHeader = useReveal(0.1)
 
   const projects = currentLanguage === 'es' ? 'Proyectos' : 'Projects'
   const projectsub = currentLanguage === 'es'
@@ -19,7 +21,7 @@ const Projects = () => {
   const featuredProject = currentLanguage === 'es' ? 'Proyecto Destacado' : 'Featured Project'
 
   const aboutSubVortex = currentLanguage === 'es' ? 'Sobre keys de videojuegos' : 'About video games keys'
-  const aboutVortex = currentLanguage === 'es' 
+  const aboutVortex = currentLanguage === 'es'
   ? 'En este comercio electronico puedes buscar tus juegos favoritos, crear y gestionar tu cuenta, añadirlos al carrito y procesar su compra.'
   : 'In this e-commerce platform, you can search for your favorite games, create and manage your account, add them to the cart, and process your purchase.'
 
@@ -29,7 +31,7 @@ const Projects = () => {
 
   return (
     <div className='projects-wrapper' id='projects-page'>
-        <div className='projects-container' >
+        <div ref={refHeader} className='reveal projects-container'>
 
             <h2>{projects}</h2>
 
@@ -38,47 +40,43 @@ const Projects = () => {
             <div className='icon-proj'>
               <FaBuffer className='icon-buffer' />
             </div>
-            
+
             <p className='dest-proj'>{featuredProject}</p>
 
             <div className='projects'>
 
                   <div className='project-container'>
 
-                    <div className='image-container '>
+                    <div className='image-container'>
                       <Link href={`https://vorttex-gaming-topabli2-topablis-projects.vercel.app/`} target="_blank" rel="noopener noreferrer">
                       <Image className='image-project' src={vortex} alt='project-photo' />
                       </Link>
-                    </div>  
+                    </div>
 
                     <div className='projects-detail'>
                     <div className='details'>
-                    <h4>Vorttex Gaming</h4>     
+                    <h4>Vorttex Gaming</h4>
                       <p className='subt text-sm md:text-base'>{aboutSubVortex}</p>
                       <p className='desc text-sm md:text-base'>{aboutVortex}</p>
                     </div>
-
-                    </div>  
+                    </div>
 
                   </div>
 
-
-
                   <div className='project-container'>
-                    <div className='image-container '>
+                    <div className='image-container'>
                       <Link href="https://talleresabiertos.netlify.app/" target="_blank" rel="noopener noreferrer">
                       <Image className='image-project' src={talleres} alt='project-photo'/>
                       </Link>
-                    </div>  
+                    </div>
 
                     <div className='projects-detail'>
                     <div className='details'>
-                    <h4>Talleres Abiertos</h4>     
+                    <h4>Talleres Abiertos</h4>
                       <p className='subt text-sm md:text-base'>{aboutSubTalleres}</p>
                       <p className='desc text-sm md:text-base'>{aboutTalleres}</p>
                     </div>
-
-                    </div>  
+                    </div>
                   </div>
             </div>
 
