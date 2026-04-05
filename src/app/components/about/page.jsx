@@ -144,7 +144,7 @@ const About = () => {
             </div>
 
             <div className='marquee-row'>
-              <div className='marquee-track reverse'>
+              <div className='marquee-track'>
                 {[...row2, ...row2].map((tech, i) => (
                   <div className='marquee-item' key={`r2-${i}`}>
                     <div className='marquee-icon'>{tech.icon}</div>
